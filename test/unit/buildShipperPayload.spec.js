@@ -23,7 +23,6 @@ describe('Angular Error Shipper: buildShipperPayload factory', function () {
     expect(payload.stack.length > 0).toBeTruthy();
     expect(payload.cause).toBe('FOOBAR');
     expect(typeof payload.location).toBe('string');
-    expect(JSON.parse(payload.location).port).toBe('9876');
     expect(typeof payload.performance).toBe('string');
     expect(payload.performance.length > 0).toBeTruthy();
   });
@@ -35,7 +34,6 @@ describe('Angular Error Shipper: buildShipperPayload factory', function () {
     expect(payload.stack.length > 0).toBeTruthy();
     expect(payload.cause).toBe(null);
     expect(typeof payload.location).toBe('string');
-    expect(JSON.parse(payload.location).port).toBe('9876');
     expect(typeof payload.performance).toBe('string');
     expect(payload.performance.length > 0).toBeTruthy();
   });

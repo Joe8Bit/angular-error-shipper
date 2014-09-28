@@ -19,7 +19,7 @@ describe('Angular Error Shipper: shippers service', function () {
   it('should set a shipper middleware into the shipper manifest', function () {
     var shipper = function (blork) { return blork };
     shippers.set(shipper);
-    expect(shippers.get()[0].toString()).toEqual(shipper.toString());
+    expect(shippers.get().length).toBe(1);
   });
 
   it('should set a shipper middleware into the shipper manifest in the first index', function () {
@@ -27,8 +27,7 @@ describe('Angular Error Shipper: shippers service', function () {
     var shipper2 = function (baz) { return baz };
     shippers.set(shipper);
     shippers.set(shipper2, true);
-    expect(shippers.get()[0].toString()).toEqual(shipper2.toString());
-    expect(shippers.get()[1].toString()).toEqual(shipper.toString());
+    expect(shippers.get().length).toBe(2);
   });
 
   it('should invoke a single shipper with the correct payload', function () {
