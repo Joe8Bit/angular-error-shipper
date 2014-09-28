@@ -1,0 +1,35 @@
+{
+  "name": "angular-error-shipper",
+  "version": "0.0.1",
+  "authors": [
+    "Joe Pettersson <joe8bit@gmail.com>"
+  ],
+  "description": "An error interceptor and shipper for AngularJS",
+  "main": "./dist/angular-error-shipper.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular",
+    "AngularJS",
+    "shipper",
+    "error"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Joe8Bit/angular-error-shipper",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Joe8Bit/angular-error-shipper"
+  },
+  "devDependencies": {
+    "angular": "~1.2.12",
+    "angular-mocks": "~1.2.12",
+    "sinon": "~1.10.3"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ]
+}
