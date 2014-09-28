@@ -3,6 +3,10 @@
 > A module for shipping errors, stack traces and other information from within your Angular app to a remote service.
 
 ![Travis Build](https://api.travis-ci.org/Joe8Bit/angular-error-shipper.svg)
+![NPM version](https://badge.fury.io/js/angular-error-shipper.svg)
+![GitHub version](https://badge.fury.io/gh/Joe8bit%2Fangular-error-shipper.svg)
+![Bower version](https://badge.fury.io/bo/angular-error-shipper.svg)
+![Dependencies](https://david-dm.org/Joe8Bit/angular-error-shipper.png)
 
 ##### Why?
 Surfacing the details of when and why your app is breaking is important, this is a tool in assisting in that process. Having these logs indexed in something like LogStash make diagnosing problems significantly easier.
