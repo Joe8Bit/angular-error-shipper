@@ -40,7 +40,7 @@ angular.module('ngErrorShipper', [])
      * @param {Function} shipper A function that takes a single argument, the error payload
      * @param {Boolean} first   Whether the function passed to it should be added at the first index of the shippers array
      */
-    function set ($window, shipper, first) {
+    function set (shipper, first) {
       if (!first) {
         shippers.push(shipper);
       } else {
