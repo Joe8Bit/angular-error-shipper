@@ -31,7 +31,7 @@ angular.module('ngErrorShipper', []).provider('$exceptionHandler', {
   }
 ]).service('shippers', function () {
   var shippers = [];
-  function set($window, shipper, first) {
+  function set(shipper, first) {
     if (!first) {
       shippers.push(shipper);
     } else {
