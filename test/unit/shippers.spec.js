@@ -20,20 +20,25 @@ describe('Angular Error Shipper: shippers service', function () {
     var shipper = function (blork) { return blork };
     shippers.set(shipper);
     expect(shippers.get().length).toBe(1);
+    expect(shippers.get()[0].toString()).toBe(shipper.toString());
   });
 
-  it('should set a shipper middleware into the shipper manifest in the first index', function () {
+  it('should set a as the first index when true passed as second argument', function () {
     var shipper = function (blork) { return blork };
     var shipper2 = function (baz) { return baz };
     shippers.set(shipper);
     shippers.set(shipper2, true);
+
     expect(shippers.get().length).toBe(2);
+    expect(shippers.get()[0].toString()).toBe(shipper2.toString());
+    expect(shippers.get()[1].toString()).toBe(shipper.toString());
   });
 
   it('should invoke a single shipper with the correct payload', function () {
-    var shipper1 = function (payload) { expect(payload).toEqual({foo: 'bar'}) };
+    var payload = { foo: 'bar' },
+        shipper1 = function (payload) { expect(payload).toEqual(payload) };
     shippers.set(shipper1);
-    shippers.ship({foo: 'bar'});
+    shippers.ship(payload);
   });
 
   it('should invoke multiple shippers with the same correct payload', function () {
