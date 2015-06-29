@@ -51,6 +51,8 @@ angular.module('myApp', [
   }]);
 ```
 
+There is a very simple example implementation in the `./example` directory.
+
 ### Default Shipper
 
 Just doing the above will not have any effect (the Angular exception handling will work as normal) you will need to configure at least one shipper. There is a default shipper than easily be configured, like so:
@@ -94,7 +96,7 @@ The function(s) you pass to the `use` method will be invoked in the order it was
 
 Each shipper will receive the same single argument, an `Object` containing all the information the error instrumentation produces. See `Data format` below for more details.
 
-You will nots there's no callback passed from the error instrumenter, as these shippers are designed to be fire-and-forget.
+You will note there's no callback passed from the error instrumenter, as these shippers are designed to be fire-and-forget.
 
 Also, if `configure` is not called and `use` is then **ONLY** the custom shippers will be used.
 

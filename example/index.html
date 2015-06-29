@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular Error Shipper Example App</title>
+    <meta charset="utf-8">
+</head>
+<body ng-app="exampleShipperApp">
+
+    <div ng-view></div>
+
+    <script type="text/ng-template" id="partials/home.html">
+        <h3>Example app</h3>
+        <p>This example app contains two routes:</p>
+        <ul>
+          <li>This route (<code>/</code>) which does nothing except render this template</li>
+          <li>The <a href="#/throw-error/">error route</a> (<code>/#/error-route</code>) which will throw a synthetic error using the default shipper, as well as a custom shipper</li>
+        </ul>
+    </script>
+
+    <script type="text/ng-template" id="partials/error.html">
+         <h1>Error page</h1>
+    </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+
+    <!-- The error shipper component -->
+    <script src="../dist/angular-error-shipper.js"></script>
+
+    <!-- Our Example Angular 1.x Application -->
+    <script src="example-app.js"></script>
+
+</body>
+</html>
