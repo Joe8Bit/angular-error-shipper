@@ -28,7 +28,7 @@ angular.module('ngErrorShipper', [])
         stack       : exception.stack.toString(),
         location    : angular.toJson($window.location),
         cause       : cause || null,
-        performance : angular.toJson(window.performance) // TODO: Be more defensive with window.performance
+        performance : ($window.performance) ? angular.toJson($window.performance) : null
       };
     }
   })
